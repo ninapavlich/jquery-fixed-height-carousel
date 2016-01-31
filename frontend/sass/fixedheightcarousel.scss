@@ -1,0 +1,53 @@
+
+$mobile_break: 768px;
+@mixin micro-clearfix(){
+  &:before,
+  &:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+
+  &:after {
+      clear: both;
+  }
+}
+
+
+.fixed-height-carousel {
+
+	width:100%;
+    overflow: visible;
+  
+    .slide-container-inner{
+        width:100%;
+        height:100%;
+        position: relative;
+
+        @include micro-clearfix();
+
+        & > *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+            height:100%;
+            position: relative;
+            display:block;
+            float:left;
+            margin:0;
+            overflow-y:scroll;
+        }
+
+        figure{
+            height:100%;
+            width: auto;
+            margin:0;
+            img{
+                display: block;
+                height:100%;
+            }
+
+        }
+    }
+
+}
