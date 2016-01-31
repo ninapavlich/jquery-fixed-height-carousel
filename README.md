@@ -1,12 +1,12 @@
-# jquery-ribbon-carousel
+# jquery-fixed-height-carousel
 
-[View a simple demo here](https://cdn.rawgit.com/ninapavlich/jquery-ribbon-carousel/master/example.html)
+[View a simple demo here](https://cdn.rawgit.com/ninapavlich/jquery-fixed-height-carousel/master/example.html)
 
 [View the carousel in the wild here](https://tess-vigil.squarespace.com/about/collections/bridesmaids)
 
 
 
-![alt text](https://raw.githubusercontent.com/ninapavlich/jquery-ribbon-carousel/master/docs/screenshot.png "Very Simple Screenshot")
+![alt text](https://raw.githubusercontent.com/ninapavlich/jquery-fixed-height-carousel/master/docs/bridesmaids.png "Very Simple Screenshot")
 
 ## Initialization
 
