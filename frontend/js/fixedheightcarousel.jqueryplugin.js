@@ -7,6 +7,7 @@
     // Create the defaults once
     var pluginName = "fixedHeightCarousel",
         defaults = {
+            margin:2,
             autoPlay:false,
             autoPlayInterval:8000,
             maxAutoPlayIntervals:1,
@@ -16,9 +17,6 @@
             animationEase:"easeInOutQuart",
             themeClass:'fixed-height-carousel-theme-default',
             initialUnloadedClass:'unloaded',
-            slideWidth:null,
-            slideHeight:null,
-            aspectRatio:1.8,
             minimumLoad:1,
             initKeyboardEvents:true,
             initDraggingEvents:true,
@@ -416,7 +414,7 @@
 
             var target_left = 0;
             $(this.slide_container).children().each(function(index, item){
-                var item_width = $(item).outerWidth();
+                var item_width = $(item).outerWidth() + parent.options.margin;
                 if(index < parent.current_index){
                     target_left = target_left-item_width;
                 }
@@ -482,7 +480,8 @@
                 var item_width = slide.get_width_for_height(parent.slide_height);
                 $(item).css("height", parent.slide_height);
                 $(item).css("width", item_width);
-                total_width += item_width;
+                $(item).css("margin-right", parent.options.margin);
+                total_width += (item_width+parent.options.margin);
             });
 
             $(this.slide_container).css("width", total_width);
@@ -753,7 +752,6 @@
         },
         calculateDimensions: function(){
             this.slide_height = $(this.element).height();
-            console.log("SLIDE HEIGHT: "+this.slide_height)
         },
         calculateAverageAspectRatio:function(){
 

@@ -2,7 +2,7 @@
 
 [View a simple demo here](https://cdn.rawgit.com/ninapavlich/jquery-ribbon-carousel/master/example.html)
 
-[View the carousel in the wild here](http://www.chrisharburg.com/)
+[View the carousel in the wild here](https://tess-vigil.squarespace.com/about/collections/bridesmaids)
 
 
 
@@ -12,7 +12,7 @@
 
 **Example Markup**
 
-    <div class="ribbon-carousel">    
+    <div class="fixed-height-carousel unloaded fixed-height-carousel-theme-default">    
             <ul>
                 <li>                
                     <a href="http://www.example.com">
@@ -52,16 +52,15 @@
 **Javascript**
 
     <script>
-        $('.ribbon-carousel').ribbonCarousel({
-            'autoPlay':false
-        });
+         $('.fixed-height-carousel').fixedHeightCarousel();
     </script>
     
 
+
 ## Options
 
-**mobileBreak:767**
-Window width in pixels at which point to mobile display
+**margin:1**
+margin between each slide
 
 **autoPlay:false**
 Auto-play carousel
@@ -78,8 +77,26 @@ Update window hash so that specific slides can be bookmarkable.
 **pageAnchorPrefix:'slide'**
 Window hash prefix used if useAnchors is true. For example, if the second slide is selected, the window url would be: http://www.example.com/#slide2
 
+**animationDuration:600**
+Duration in ms of sliding animation
+
+**animationEase:'easeInOutQuart'**
+Easing function used in sliding animation
+
 **themeClass:'ribbon-carousel-theme-default'**
 The css class to add to the container
 
-**aspectRatio:null**
-Aspect ratio used -- based on width of slide container -- to establish the height of the slides. If left null, it will calculate the average aspect ratio of all the slides and use that.
+**initialUnloadedClass:'unloaded'**
+Class that gets removed from container once widget is loaded
+
+**minimumLoad:true**
+Class that gets removed from container once widget is loaded
+
+**initKeyboardEvents:true**
+Initialize keyboard arrow capabilities
+
+**initDraggingEvents:true**
+Initialize dragging capabilities
+
+**initUI:true**
+Initialize UI elements
